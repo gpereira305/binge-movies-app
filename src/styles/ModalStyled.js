@@ -9,7 +9,7 @@ export const Modal = styled.div`
   right: 0;
   bottom: 0;
   overflow: auto;
-  background-color: #000;
+  background-color: rgb(0 0 0 / 10%);
   opacity: 0;
   visibility: hidden;
 

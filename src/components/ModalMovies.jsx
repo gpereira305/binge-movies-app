@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Modal, ModalContent } from "../styles/ModalStyled";
+// import { Modal, ModalContent } from "../styles/ModalStyled";
 
 const ModalMovies = (props) => {
   const [active, setActive] = useState(false);
@@ -9,13 +9,13 @@ const ModalMovies = (props) => {
   }, [props.active]);
 
   return (
-    <Modal id={props.id} className={`modal ${active ? "active" : ""}`}>
+    <div id={props.id} className={`modal ${active ? "active" : ""}`}>
       {props.children}
-    </Modal>
+    </div>
   );
 };
 
-const ModalMoviesContent = (props) => {
+export const ModalMoviesContent = (props) => {
   const contentRef = useRef(null);
 
   const closeModal = () => {
@@ -24,12 +24,16 @@ const ModalMoviesContent = (props) => {
   };
 
   return (
-    <ModalContent ref={contentRef}>
+    <div className="modal__content" ref={contentRef}>
       {props.children}
-      <div onClick={closeModal}>
-        <span class="material-icons">close</span>
+      <div
+        className="modal__content--close"
+        onClick={closeModal}
+        title="Fechar"
+      >
+        <span className="material-icons">close</span>
       </div>
-    </ModalContent>
+    </div>
   );
 };
 

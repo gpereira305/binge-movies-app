@@ -5,7 +5,7 @@ const ButtonMovies = (props) => {
   return (
     <Button
       className={`btn__filled ${props.className}`}
-      onClick={props.nClick ? () => props.onClick() : null}
+      onClick={props.onClick ? () => props.onClick() : null}
     >
       {props.children}
     </Button>
@@ -16,7 +16,7 @@ export const ButtonMoviesOut = (props) => {
   return (
     <Button
       className={`btn__outlined ${props.className}`}
-      onClick={props.nClick ? () => props.onClick() : null}
+      onClick={props.onClick ? () => props.onClick() : null}
     >
       {props.children}
     </Button>

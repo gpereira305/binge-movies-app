@@ -14,7 +14,7 @@ export const HeaderNav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 10vh;
+  min-height: 7vh;
   width: calc(100% - 200px);
   margin: auto;
 

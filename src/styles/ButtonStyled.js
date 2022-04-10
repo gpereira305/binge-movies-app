@@ -13,7 +13,7 @@ export const Button = styled.button`
   &.btn__outlined {
     border: 2px solid var(--red-color);
     background-color: transparent;
-    color: var(--red-color);
+    color: var(--white-color);
     transition: var(--transition);
 
     &:hover {

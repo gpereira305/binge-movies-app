@@ -4,6 +4,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import Routes from "./routes";
 import FooterMovies from "./components/FooterMovies";
 import HeaderMovies from "./components/HeaderMovies";
+import "./styles/styles.css";
 
 const App = () => (
   <>

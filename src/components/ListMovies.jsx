@@ -1,12 +1,11 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import CardMovies from "./CardMovies";
+import tmdbApi, { category } from "../api/tmdbApi";
 
 import { Autoplay, Pagination, Navigation, EffectFade, Parallax } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
-import "swiper/swiper-bundle.min.css";
-import tmdbApi, { category } from "../api/tmdbApi";
-import apiConfig from "../api/config";
-import { Button } from "../styles/ButtonStyled";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 const ListMovies = (props) => {
   const [items, setItems] = useState([]);
@@ -37,21 +36,17 @@ const ListMovies = (props) => {
     <div className="movie__list">
       <Swiper
         modules={[Autoplay, Pagination, Navigation, EffectFade, Parallax]}
-        autoplay={{ delay: 5000 }}
-        loop={true}
+        // autoplay={{ delay: 5000 }}
+        // loop={true}
         speed={1400}
         slidesPerView={5}
-        spaceBetween={20}
+        spaceBetween={30}
         slidesPerGroup={3}
         navigation={true}
       >
         {items.map((item, i) => (
           <SwiperSlide key={i}>
-            <img
-              src={apiConfig.w500Img(item.poster_path)}
-              alt={item.title}
-              title={item.title}
-            />
+            <CardMovies item={item} category={props.category} />
           </SwiperSlide>
         ))}
       </Swiper>

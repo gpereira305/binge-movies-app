@@ -3,11 +3,11 @@ import { useHistory } from "react-router-dom";
 import apiConfig from "../api/config";
 import tmdbApi, { category, movieType } from "../api/tmdbApi";
 import ModalMovies, { ModalMoviesContent } from "./ModalMovies";
+import ButtonMovies, { ButtonMoviesOut } from "./ButtonMovies";
 
 import { Autoplay, Pagination, Navigation, EffectFade, Parallax } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
-import "swiper/swiper-bundle.min.css";
-import ButtonMovies, { ButtonMoviesOut } from "./ButtonMovies";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 const HeroSlideMovies = () => {
   const [movieItems, setMovieItems] = useState([]);
@@ -78,7 +78,7 @@ const HeroSlideItem = (props) => {
         .setAttribute("src", videosSrc);
     } else {
       modal.querySelector(".modal__content").innerHTML =
-        "Nenhum trailer disponível";
+        "Nenhum trailer disponível!";
     }
     modal.classList.toggle("active");
   };

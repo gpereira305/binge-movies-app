@@ -24,7 +24,12 @@ export const ModalMoviesContent = (props) => {
   };
 
   return (
-    <div className="modal__content" ref={contentRef}>
+    <div
+      className="modal__content"
+      ref={contentRef}
+      onClick={closeModal}
+      title="Clique para fechar modal"
+    >
       {props.children}
       <div
         className="modal__content--close"

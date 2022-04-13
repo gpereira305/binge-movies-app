@@ -22,6 +22,7 @@ export const HeaderNav = styled.nav`
     display: flex;
 
     @media (max-width: 724px) {
+      display: none;
       flex-direction: column;
       position: absolute;
       justify-content: space-around;

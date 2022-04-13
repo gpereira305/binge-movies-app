@@ -46,4 +46,8 @@ export const GlobalStyle = createGlobalStyle`
 export const ContainerMovies = styled.div`
   width: calc(100% - 200px);
   margin: auto;
+
+  @media (max-width: 724px) {
+    width: calc(100% - 80px);
+  }
 `;
